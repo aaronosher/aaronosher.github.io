@@ -17,8 +17,8 @@
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   animation: 
-    typing 3.5s 2s steps(40, end) forwards,
-    blink-caret 1s step-end 2s 4 normal forwards;
+    typing 3.5s 1s steps(40, end) forwards,
+    blink-caret 1s step-end 1s 4 normal forwards;
   width: 0;
 }
 
@@ -54,7 +54,7 @@ a:hover {
   margin-top: 2em;
   padding: 0 1em;
   animation:
-    appear 2s ease 4.8s forwards;
+    appear 2s ease 3.8s forwards;
 }
 
 .brandButtons {
@@ -68,7 +68,7 @@ a:hover {
   justify-content: space-around;
   opacity: 0;
   animation:
-    appear 2s ease 4.8s forwards;
+    appear 2s ease 3.8s forwards;
 
   a {
     border-radius: 50%;
