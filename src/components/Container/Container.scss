@@ -20,7 +20,7 @@ $break3: 425px;
   position: absolute;
   box-shadow: 0.5em 0.5em 1em #0000007a;
   color: white;
-  animation: fade-up ease 2s forwards;
+  animation: fade-up ease 1s forwards;
 
   @media screen and (max-width: $break1) {
     width: 60vw;
@@ -32,7 +32,8 @@ $break3: 425px;
     left: 10vw;
   }
 
-  @media screen and (max-width: $break2) {
+  @media screen and (max-width: $break3) {
+    top: 5vh;
     width: 95vw;
     left: 2.5vw;
   }
