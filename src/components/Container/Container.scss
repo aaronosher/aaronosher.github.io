@@ -1,7 +1,8 @@
 .particlesBg {
-  position: absolute;
+  position: fixed;
   background-color: #020d24;
   z-index: -1;
+  max-width: 100%;
 }
 
 $break1: 1024px;

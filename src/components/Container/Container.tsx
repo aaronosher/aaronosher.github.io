@@ -11,7 +11,7 @@ class App extends Component {
 
     return (
       <React.Fragment>
-        <Particles params={particlesConfig} className="particlesBg" width="100vw" height="100vh" />
+        {/* <Particles params={particlesConfig} className="particlesBg" width="100vw" height="100vh" /> */}
         <div className="App">
           {children}
         </div>
