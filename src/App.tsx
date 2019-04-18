@@ -1,26 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Container  from './components/Container/Container';
+import Link from './components/Link/Link';
+import Aaron from './resources/images/Aaron.jpg';
+import './App.scss';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Container>
+        <div className="container">
+          <img src={Aaron} className="portrait" />
+          <div className="typewriter">
+            <h1>Hi, I'm Aaron. 👋</h1>
+          </div>
+          <div className="bio">
+            I study computer science at the <Link href="https://cs.nott.ac.uk">University of Nottingham</Link>, am the president of <Link href="https://hacksocnotts.co.uk">HackSoc</Link>, a <Link href="https://githubcampus.expert/aaronosher">GitHub Campus Expert</Link>, and a Coach at <Link href="https://mlh.io/eu">Major League Hacking</Link>.
+          </div>
+        </div>
+      </Container>
     );
   }
 }
