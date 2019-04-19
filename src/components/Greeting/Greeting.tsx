@@ -75,7 +75,7 @@ export default class Greeting extends Component<GreetingProps, GrettingState> {
     return (
       <Fragment>
         <div className="typewriter" style={{visibility: visible ? 'visible' : 'hidden'}}>
-    <h1>{greetingText}{!finished && <span style={{visibility: cursor ? 'visible' : 'hidden'}}>_</span>}</h1>
+          <h1>{greetingText}{!finished && <span style={{visibility: cursor ? 'visible' : 'hidden'}}>_</span>}</h1>
         </div>
       </Fragment>
     )
