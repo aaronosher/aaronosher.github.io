@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import './Container.scss';
-import Particles, { IParticlesParams } from 'react-particles-js';
-import particlesConfigJson from '../../resources/particlesjs-config.json';
+import Navigation from '../Navigation/Navigation';
+// import Particles, { IParticlesParams } from 'react-particles-js';
+// import particlesConfigJson from '../../resources/particlesjs-config.json';
 
-const particlesConfig = particlesConfigJson as IParticlesParams;
+// const particlesConfig = particlesConfigJson as IParticlesParams;
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
     return (
       <React.Fragment>
         {/* <Particles params={particlesConfig} className="particlesBg" width="100vw" height="100vh" /> */}
+        <Navigation />
         <div className="App">
           {children}
         </div>

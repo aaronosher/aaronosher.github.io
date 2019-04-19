@@ -1,0 +1,19 @@
+$break1: 1024px;
+$break2: 768px;
+$break3: 425px;
+
+.navigation {
+  float: right;
+  margin-right: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  
+  a {
+    margin: 1em 1em 0 1em;
+
+    @media screen and (max-width: $break3) {
+      margin: 0.5em 0.5em;
+    }
+  }
+}
