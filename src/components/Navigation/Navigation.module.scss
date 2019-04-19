@@ -8,12 +8,33 @@ $break3: 425px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  opacity: 0;
+
+  animation:
+    appear 2s ease 2.2s forwards;
   
   a {
+    font-weight: normal;
+    color: lightgrey;
+
     margin: 1em 1em 0 1em;
 
     @media screen and (max-width: $break3) {
       margin: 0.5em 0.5em;
     }
   }
+
+  a:hover {
+    color: white;
+  }
+}
+
+a.active, a.active:hover {
+  color: white;
+  border-bottom: 0.1em solid white;
+}
+
+@keyframes appear {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
