@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import runes from 'runes';
-import './Greeting.scss';
+import { typewriter } from './Greeting.module.scss';
 
 export interface GreetingProps {
   children: string;
@@ -74,7 +74,7 @@ export default class Greeting extends Component<GreetingProps, GrettingState> {
     const { greetingText, visible, cursor, finished } = this.state;
     return (
       <Fragment>
-        <div className="typewriter" style={{visibility: visible ? 'visible' : 'hidden'}}>
+        <div className={typewriter} style={{visibility: visible ? 'visible' : 'hidden'}}>
           <h1>{greetingText}{!finished && <span style={{visibility: cursor ? 'visible' : 'hidden'}}>_</span>}</h1>
         </div>
       </Fragment>
