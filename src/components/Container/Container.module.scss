@@ -40,6 +40,21 @@ $break3: 425px;
 
 }
 
+.medium {
+  width: 40vw;
+  left: 30vw;
+
+  @media screen and (max-width: $break1) {
+    width: 70vw;
+    left: 15vw;
+  }
+
+  @media screen and (max-width: $break2) {
+    width: 90vw;
+    left: 5vw;
+  }
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;

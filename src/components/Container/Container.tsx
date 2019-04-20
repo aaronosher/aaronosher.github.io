@@ -1,19 +1,37 @@
-import React, { Component, Fragment } from 'react';
-import { App as AppStyles } from './Container.module.scss';
+import React, { Component, Fragment, ReactNode } from 'react';
+import { App as AppStyles, medium } from './Container.module.scss';
+import cx from 'classnames';
 
-class App extends Component {
+export interface ContainerProps {
+  size?: 'small' | 'medium' | 'large';
+  children: ReactNode;
+}
+
+export interface ContainerState {
+
+}
+
+class Container extends Component<ContainerProps, ContainerState> {
+  static defaultProps = {
+    size: 'small',
+  };
+
   render() {
-    const { children } = this.props;
+    const { children, size } = this.props;
+
+    const containerClass = cx(AppStyles,
+      size === 'medium' && medium,
+      size === 'large' && medium
+    );
 
     return (
-      <React.Fragment>
-        {/* <Particles params={particlesConfig} className="particlesBg" width="100vw" height="100vh" /> */}
-        <div className={AppStyles}>
+      <Fragment>
+        <div className={containerClass}>
           {children}
         </div>
-      </React.Fragment>
+      </Fragment>
     );
   }
 }
 
-export default App;
+export default Container;
