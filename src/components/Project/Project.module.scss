@@ -30,6 +30,24 @@ $break3: 425px;
   text-align: left;
   margin-top: 0;
   font-size: 11pt;
+
+  a {
+    font-weight: normal;
+    text-decoration: underline;
+
+    &:hover {
+      font-weight: normal;
+      animation: a-hover ease-in 0.2s forwards;
+    }
+  }
+}
+
+@keyframes a-hover {
+  from {
+    text-decoration-color: #FFFFFFFF
+  } to {
+    text-decoration-color: #FFFFFF00
+  }
 }
 
 @keyframes thumb-hover {
