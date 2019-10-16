@@ -9,7 +9,7 @@ class Navigation extends Component {
         <NavLink to="/" exact activeClassName={active}>About</NavLink>
         <NavLink to="/projects" activeClassName={active}>Projects</NavLink>
         <NavLink to="/activities" activeClassName={active}>Activities</NavLink>
-        <NavLink to="/cv" activeClassName={active}>CV</NavLink>
+        <a href="/AaronOsherCV.pdf" target="_blank" rel="norefferer noopener">CV</a>
       </div>
     );
   }
