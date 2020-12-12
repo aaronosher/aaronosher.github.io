@@ -8,7 +8,6 @@ import {
 import Container from "../components/Container";
 import Link from "../components/Link";
 import Greeting from "../components/Greeting";
-import Aaron from "../assets/images/Aaron.jpg";
 import {
   container,
   portraitContainer,
@@ -18,6 +17,7 @@ import {
 } from "../assets/scss/pages/About.module.scss";
 import { graphql } from "gatsby";
 import Img, { FluidObject } from "gatsby-image";
+import SEO from "../components/SEO";
 
 interface AppPageProps {
   data: {
@@ -39,15 +39,20 @@ interface AppPageProps {
 const App: React.FC<AppPageProps> = ({ data }) => {  
   return (
     <Container>
+      <SEO title="About" />
       <div className={container}>
         <div className={portraitContainer}>
-          <Img fluid={data.aaron.childImageSharp.fluid} className={portrait} alt='Portrait of Aaron' />
+          <Img
+            fluid={data.aaron.childImageSharp.fluid}
+            className={portrait}
+            alt="Portrait of Aaron"
+          />
         </div>
         <Greeting />
         <div className={bio}>
           I study computer science at the{" "}
-          <Link href="https://cs.nott.ac.uk">University of Nottingham</Link>,
-          am the president of{" "}
+          <Link href="https://cs.nott.ac.uk">University of Nottingham</Link>, am
+          the president of{" "}
           <Link href="https://hacksocnotts.co.uk">HackSoc</Link>, a Coach at{" "}
           <Link href="https://mlh.io/eu">Major League Hacking</Link>, and
           co-founder of{" "}

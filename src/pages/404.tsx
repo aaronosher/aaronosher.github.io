@@ -1,10 +1,12 @@
 import React from "react";
 import Container from "../components/Container";
 import { container as containerClass } from "../assets/scss/pages/About.module.scss";
+import SEO from "../components/SEO";
 
 const Page404 = () => {
   return (
     <Container>
+      <SEO title="Page not Found" />
       <div className={containerClass}>
         <h1>
           <span role="img" aria-label="thinking emoji">
