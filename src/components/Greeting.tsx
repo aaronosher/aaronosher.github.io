@@ -1,6 +1,6 @@
-import React, { Component, Fragment } from 'react';
-import runes from 'runes';
-import { typewriter } from './Greeting.module.scss';
+import React, { Component, Fragment } from "react";
+import runes from "runes";
+import { typewriter } from "../assets/scss/components/Greeting.module.scss";
 
 export interface GreetingProps {
   children: string;
@@ -59,25 +59,34 @@ export default class Greeting extends Component<GreetingProps, GrettingState> {
         });
         return;
       }
-      
+
       this.setState({
         greetingText: runes.substr(message, 0, i),
         visible: true,
       });
-      console.log('type');
+      console.log("type");
       i++;
-    }, 2500/message.length)
-
+    }, 2500 / message.length);
   }
 
   render() {
     const { greetingText, visible, cursor, finished } = this.state;
     return (
       <Fragment>
-        <div className={typewriter} style={{visibility: visible ? 'visible' : 'hidden'}}>
-          <h1>{greetingText}{!finished && <span style={{visibility: cursor ? 'visible' : 'hidden'}}>_</span>}</h1>
+        <div
+          className={typewriter}
+          style={{ visibility: visible ? "visible" : "hidden" }}
+        >
+          <h1>
+            {greetingText}
+            {!finished && (
+              <span style={{ visibility: cursor ? "visible" : "hidden" }}>
+                _
+              </span>
+            )}
+          </h1>
         </div>
       </Fragment>
-    )
+    );
   }
 }

@@ -1,16 +1,19 @@
-import React, { Component } from 'react';
-import IProject from '../../_projects/IProject';
-import { thumb, description, title, container } from './Project.module.scss';
-import Link from '../Link/Link';
+import React, { Component } from "react";
+import IProject from "../_projects/IProject";
+import {
+  thumb,
+  description,
+  title,
+  container,
+} from "../assets/scss/components/Project.module.scss";
+import Link from "./Link";
 
 export interface ProjectProps {
   project: IProject;
   key: string | number;
 }
 
-export interface ProjectState {
-
-}
+export interface ProjectState {}
 
 class Project extends Component<ProjectProps, ProjectState> {
   render() {
@@ -21,7 +24,10 @@ class Project extends Component<ProjectProps, ProjectState> {
         <Link href={project.link}>
           <img src={project.image} className={thumb} />
         </Link>
-        <p className={description}>{project.description} Check it out <Link href={project.link}>here</Link>.</p>
+        <p className={description}>
+          {project.description} Check it out{" "}
+          <Link href={project.link}>here</Link>.
+        </p>
       </div>
     );
   }

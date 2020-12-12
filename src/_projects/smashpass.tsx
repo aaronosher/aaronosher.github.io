@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Link from '../components/Link/Link';
+import Link from "../components/Link";
 import IProject from './IProject';
 import SmashPassImage from './images/smashpass.png';
 

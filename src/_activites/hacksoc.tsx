@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Link from '../components/Link/Link';
+import Link from "../components/Link";
 import IActivity from './IActivity';
 import HackSocLogo from './images/hacksoc.svg';
 
