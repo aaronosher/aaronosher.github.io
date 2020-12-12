@@ -21,13 +21,13 @@ module.exports = {
         path: `${__dirname}/src/assets/docs`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: "content",
-        path: `${__dirname}/src/content`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: "content",
+    //     path: `${__dirname}/src/content`,
+    //   },
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-fontawesome-css`,
