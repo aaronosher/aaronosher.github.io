@@ -1,0 +1,59 @@
+$break1: 1024px;
+$break2: 768px;
+$break3: 425px;
+
+.container {
+  overflow: hidden;
+}
+
+.thumb {
+  float: left;
+  width: 15%;
+  padding: 0 0.5em 0.5em 0;
+
+  @media screen and (max-width: $break3) {
+    width: 20%;
+  }
+
+  &:hover {
+    animation: thumb-hover ease-in 0.2s forwards;
+  }
+}
+
+.title {
+  text-align: left;
+  margin-bottom: 0.5em;
+}
+
+.description {
+  text-align: left;
+  margin-top: 0;
+  font-size: 11pt;
+
+  a {
+    font-weight: normal;
+    text-decoration: underline;
+
+    &:hover {
+      font-weight: normal;
+      animation: a-hover ease-in 0.2s forwards;
+    }
+  }
+}
+
+@keyframes a-hover {
+  from {
+    text-decoration-color: #FFFFFFFF
+  } to {
+    text-decoration-color: #FFFFFF00
+  }
+}
+
+@keyframes thumb-hover {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.75;
+  }
+}
