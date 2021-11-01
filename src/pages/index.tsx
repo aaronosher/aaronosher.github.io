@@ -26,17 +26,17 @@ interface AppPageProps {
         title: string;
         description: string;
         author: string;
-      }
-    }
+      };
+    };
     aaron: {
       childImageSharp: {
-        fluid: FluidObject
-      }
-    }
-  }
+        fluid: FluidObject;
+      };
+    };
+  };
 }
 
-const App: React.FC<AppPageProps> = ({ data }) => {  
+const App: React.FC<AppPageProps> = ({ data }) => {
   return (
     <Container>
       <SEO title="About" />
@@ -50,11 +50,8 @@ const App: React.FC<AppPageProps> = ({ data }) => {
         </div>
         <Greeting />
         <div className={bio}>
-          I study computer science at the{" "}
-          <Link href="https://cs.nott.ac.uk">University of Nottingham</Link>, am
-          the president of{" "}
-          <Link href="https://hacksocnotts.co.uk">HackSoc</Link>, a Coach at{" "}
-          <Link href="https://mlh.io/eu">Major League Hacking</Link>, and
+          Software Engineer at{" "}
+          <Link href="https://mlh.io">Major League Hacking</Link>, and
           co-founder of{" "}
           <Link href="https://hackathons.org.uk">Hackathons UK</Link>.
         </div>
@@ -88,7 +85,7 @@ const App: React.FC<AppPageProps> = ({ data }) => {
       </div>
     </Container>
   );
-}
+};
 
 export default App;
 
@@ -101,7 +98,7 @@ export const AppPageQuery = graphql`
         author
       }
     }
-    aaron: file(name: { eq: "Aaron"}) {
+    aaron: file(name: { eq: "Aaron" }) {
       childImageSharp {
         fluid(maxWidth: 540) {
           ...GatsbyImageSharpFluid
@@ -109,4 +106,4 @@ export const AppPageQuery = graphql`
       }
     }
   }
-`
+`;
